@@ -10,15 +10,15 @@ function computerPlay(min,max){  //computer function randomly generates 1 of 3 n
     compNum= Math.floor(Math.random()*(max - min) + min); //gets random # between values "min" and "max"
      if(compNum === 0){
          return ("Rock");
-         console.log("comp rock")
+         console.log("comp rock");
      }
      else if(compNum === 1){
-         return( "Paper")
-         console.log("comp paper")
+         return( "Paper");
+         console.log("comp paper");
      }
      else if(compNum === 2){
-         return("Scissors")
-         console.log("comp scissors")
+         return("Scissors");
+         console.log("comp scissors");
      }
 }
 
@@ -86,7 +86,23 @@ function playerSelection(input){
 
     //console.log(singleGame(playerSelection(),computerPlay(0,3)))
     function game(){
-    for(let i = 0; i <=4; i++){
+  // for(let i = 0; i <=4; i++){
+       /* let rock = document.createElement('button');
+        rock.innerHTML = "Rock";
+        document.body.appendChild(rock);
+        rock.addEventListener('click', singleGame() )
+
+        let paper = document.createElement('button');
+        paper.innerHTML = "Paper";
+        document.body.appendChild(paper);
+
+        let scissors = document.createElement('button');
+        scissors.innerHTML = "scissors";
+        document.body.appendChild(scissors);*/
+
+
+        
+
         singleGame(playerSelection(),computerPlay(0,3));
         console.log("count : ", count, " , player score : ", playerScore, " , computerScore : ", compScore, " , number of ties : ", numTies)
         if(playerScore === 3){
@@ -97,6 +113,6 @@ function playerSelection(input){
             console.log("Computer Wins!");
             return "Computer Wins"
         }
-    }
+   // }*/
     }
     game()

@@ -1,0 +1,35 @@
+.reset{
+    display: none;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: grey;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    text-shadow: 0 0 4px black;
+}
+.choices{
+    display: flex;
+    width: 80vh;
+    justify-content: space-around;
+}
+.playerImgs{
+    display: flex;
+    width: auto;
+    justify-content: center;
+    background: burlywood;
+    padding: 20px;
+    gap: 60px;
+
+}
+.computeImgs{
+    display: flex;
+    width: auto;
+    justify-content: space-around;
+    background: burlywood;
+    padding: 20px;
+
+}

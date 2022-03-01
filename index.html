@@ -5,10 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RockPaperScissors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="script3.js">
+    <div class="score">
+        <h1 class="ties">Ties: 0</h1>
+    </div>
+    <div class="winnerDiv">
+        <h1 class="winner"></h1>
+        <button class="reset" onclick="resetGame()">Play Again?</button>
+    </div>
+    <div class="playerSection">
+        <h3 class="playerChoice"></h3>
+        <h3 class="test"></h3>
+        <h3 class="playerScore">score = 0</h3>
+        <div class="playerImgs">
+            <img src="./imgs/rock.png" alt="rock" class="pImg" id="rock">
+            <img src="./imgs/paper.png" alt="paper" class="pImg" id="paper">
+            <img src="./imgs/scissors.png" alt="scissors" class="pImg" id="scissors">
+        </div>
 
-    </script>
+        
+    </div>
+     <div class="computeSection">
+        <h3 class="computeChoice"></h3>
+        <h3 class="computeScore">score = 0</h3>
+        <div class="computeImgs">
+            <img src="./imgs/rock.png" alt="rock" class="pImg">
+            <img src="./imgs/paper.png" alt="paper" class="pImg" >
+            <img src="./imgs/scissors.png" alt="scissors" class="pImg" >
+        </div>
+
+        
+    </div>
+    
 </body>
+
+<script src="main1.js"></script>
 </html>
