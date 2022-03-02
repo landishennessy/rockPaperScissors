@@ -21,13 +21,19 @@ function startGame(){
     imgs.forEach((img)=> 
     img.addEventListener(('click'),() =>{
         if(img.id){
-            playRound(img.id);
+            playRound(img.id); //if image has id, play round with the ID
+            document.querySelector(`#${img.id}`).classList.add('active');
+            //removes the choice selected from active state after 700 ms
+            setTimeout(() =>{
+                document.querySelector(`#${img.id}`).classList.remove('active');
+            }, 700);
         }
     }))
+
 }
 
 function playRound(playerSelection){
-   // const playerSelection = playerChoice();
+   
    let wins = checkWins();
    if(wins>=5){
        return
@@ -36,14 +42,12 @@ function playRound(playerSelection){
     const winner = checkWinner(playerSelection, computerSelection);
     winners.push(winner)
    
-  //  logRound(playerSelection,computerSelection,winner,round)
     tallyWins();
     displayRound(playerSelection, computerSelection, winner);
     wins = checkWins();
     if(wins == 5){
-        // display end result
-        //change the button to visable
-        //change the text to display winner
+        
+        //displays end results
         displayEnd()
 
     }
@@ -90,26 +94,21 @@ function tallyWins(){
 
 }
 
-function playerChoice(){
-  
-
-}
-
 
 function computerChoice(){
-    //update the dom
+    //creates choice const from the options given
     const choice = choices[Math.floor(Math.random()*choices.length)];
-    return choice;
-
+   
+    //puts the choice selected in active state
     document.querySelector(`.${choice}`).classList.add('active');
-
+    //removes the choice selected from active state after 700 ms
     setTimeout(() =>{
-        document.querySelector(`.${choice}'`).classList.remove('active');
+        document.querySelector(`.${choice}`).classList.remove('active');
     }, 700);
 
     return choice;
 }
-
+//uses the winner array to determine number of wins for each player
 function checkWins(){
     let playerWins = winners.filter((item)=> item == 'Player').length;
     let computerWins = winners.filter((item) => item == 'Computer').length;
@@ -118,8 +117,7 @@ function checkWins(){
 }
 
 function checkWinner(choiceP, choiceC){
-   // console.log("test");
-  //  console.log("player " ,choiceP, " computer ", choiceC);
+  
     if(choiceP === choiceC){
       //  console.log('tie test');
         return 'tie';}
