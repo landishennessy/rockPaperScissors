@@ -12,6 +12,30 @@
     color: white;
     text-shadow: 0 0 4px black;
 }
+.score{
+    display: flex;
+    justify-content: center;
+}
+.winnerDiv{
+    display: flex;
+    justify-content: center;
+}
+.playerSection{
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    align-self: center;
+}
+.computeSection{
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    align-self: center;
+
+}
+
 .choices{
     display: flex;
     width: 80vh;
@@ -24,15 +48,17 @@
     background: burlywood;
     padding: 20px;
     gap: 60px;
+    width: 50%;
 
 }
 .computeImgs{
     display: flex;
     width: auto;
-    justify-content: space-around;
+    justify-content: center;
     background: burlywood;
     padding: 20px;
-
+    gap: 60px;
+    width: 50%;
 }
 .active {
     width: 110px;
@@ -42,4 +68,8 @@
 img {
     width: 90px;
     height: 90px;
+  }
+  .gameTitle{
+      display: flex;
+      justify-content: center;
   }

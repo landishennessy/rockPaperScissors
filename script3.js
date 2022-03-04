@@ -38,7 +38,7 @@ function playerSelection(input){
       
         if(playerSelection === computerPlay){   //informs users of tie case
             console.log("tie")
-            console.log("player selection : ", playerSelection ," ,  computer selection: ", computerPlay);
+            console.log("player selection : ", playerSelection ," ,  computer selectio button.addEventListenern: ", computerPlay);
             count ++;
             numTies++;
             return "Tie Game, play again"; 
@@ -100,8 +100,14 @@ function playerSelection(input){
         scissors.innerHTML = "scissors";
         document.body.appendChild(scissors);*/
 
+        let buttons = document.querySelectorAll('button');
+        buttons.forEach(button){
+            button.addEventListener('click', singleGame(button.id))
 
-        
+        }
+
+
+
 
         singleGame(playerSelection(),computerPlay(0,3));
         console.log("count : ", count, " , player score : ", playerScore, " , computerScore : ", compScore, " , number of ties : ", numTies)

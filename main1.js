@@ -66,7 +66,7 @@ function displayEnd(){
 
 function displayRound(playerSelection, computerSelection, winner){
     document.querySelector('.playerChoice').textContent = `You chose ${playerSelection}`;
-    document.querySelector('.computeChoice').textContent = `You chose ${computerSelection}`;
+    document.querySelector('.computeChoice').textContent = `Computer chose ${computerSelection}`;
     document.querySelector('.winner').textContent = `${winner} is victorious!`
     displayRoundWinner(winner);
 
